@@ -1,0 +1,29 @@
+
+
+body {
+  font-family: PTSans;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 24px;
+  font-weight: regular;
+}
+
+
+h1 {
+  font-family: Cuprum;
+  font-size: 36px;
+  font-style: normal;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+h2 {
+  font-family: Cuprum;
+  font-size: 30px;
+  font-style: normal;
+  line-height: 30px;
+  font-weight: regular;
+  text-transform: uppercase;
+}
