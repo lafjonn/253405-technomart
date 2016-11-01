@@ -187,6 +187,11 @@ aside {
 
 .block-top {
   background-color: #f7f3ec;
+  width: 940px;
+}
+
+.promo {
+  margin-top: 60px;
 }
 
 .promo-item {
@@ -228,10 +233,14 @@ aside {
   border: 1px solid #e5e5e5;
 }
 
+.vendors-block {
+}
+
 .vendor-card {
   display: inline-block;
   width: 220px;
   height: 145px;
+  border: 1px solid #e5e5e5;
 }
 
 .service-block {
@@ -276,16 +285,31 @@ aside {
 }
 
 .info-block {
+  background-color: #f2f6f8;
   clear: both;
+}
+
+.info-perf {
   padding-top: 60px;
   padding-left: 130px;
   padding-bottom: 60px;
-  background-color: #f2f6f8;
   margin-top: 60px;
+}
+
+.company-info {
+  float: left;
+  width: 530px;
+}
+
+
+.contacts {
+  float: right;
+  width: 300px;
 }
 
 .footer-top {
   background-color: #32425c;
+  clear: both;
 }
 
 .footer-contacts {
@@ -325,6 +349,7 @@ aside {
 
 .footer-bottom {
   background-color: #293449;
+  clear: both;
 }
 
 .copyright {
