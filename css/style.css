@@ -25,13 +25,7 @@ h2 {
 
 .head-top {
   background-color: #293449;
-  width: 100%;
   height: 42px;
-}
-
-.container {
-  padding: 0 10px;
-  margin: 0 auto;
 }
 
 .head-top a {
@@ -47,19 +41,24 @@ h2 {
 
 .head-main {
   background-color: #f1f5f7;
-  width: 100%;
+  width: auto;
   padding-bottom: 60px;
+  padding-left: 50px;
+  padding-top: 40px;
+  padding-right: 50px;
 }
 
 .head-info {
   float: left;
-  width: 200px;
+  width: 210px;
   color: #ee3643;
   font-style: italic;
 }
 
 .head-contacts {
   float: left;
+  width: 270px;
+  margin-right: 70px;
 }
 
 .head-contacts a {
@@ -72,17 +71,22 @@ h2 {
   color: #32425c;
 }
 
-.user div {
-  display: inline-block;
+.user-buttons {
+  display: none;
 }
 
 .user-block {
-  width: 250px;
+  float: right;
+  width: 300px;
+}
+
+.user-block div {
+  display: inline-block;
 }
 
 .head-menu {
   width: 940px;
-  margin: auto;
+  clear: both;
 }
 
 .head-menu ul {
@@ -103,10 +107,83 @@ h2 {
 
 main {
   background-color: #ffffff;
-  width: auto;
-  padding-top: 119px;
-  padding-bottom: 119px;
 }
+
+/* каталог */
+
+.breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  display: inline;
+}
+
+.page-title {
+  background-color: #f2f6f8;
+  width: 880px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+aside {
+  float: left;
+  width: 220px;
+  margin-right: 20px;
+}
+
+.filter span {
+  display: block;
+  background-color: #f7f3ec;
+  padding: 15px;
+}
+
+.catalog {
+  float: left;
+  width: 700px;
+}
+
+.sort {
+  background-color: #f7f3ec;
+  padding: 15px;
+  width: 660px;
+  float: left;
+}
+
+.sort ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+}
+
+.sort li {
+  display: inline;
+}
+
+.sort-arrows {
+  display: inline;
+}
+
+.pagination {
+  clear: both;
+}
+
+.pagination ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination li {
+  display: inline;
+}
+
+
+/* главная страница */
 
 .block-top {
   background-color: #f7f3ec;
@@ -148,6 +225,7 @@ main {
   width: 220px;
   height: 318px;
   display: inline-block;
+  border: 1px solid #e5e5e5;
 }
 
 .vendor-card {
@@ -199,16 +277,30 @@ main {
 
 .info-block {
   clear: both;
-}
-
-footer {
-  width: 100%;
+  padding-top: 60px;
+  padding-left: 130px;
+  padding-bottom: 60px;
+  background-color: #f2f6f8;
+  margin-top: 60px;
 }
 
 .footer-top {
   background-color: #32425c;
 }
 
+.footer-contacts {
+  width: 330px;
+  color: #ffffff;
+}
+
+.footer-contacts a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-menu {
+  text-align: right;
+}
 
 .footer-menu ul {
   background-color: #32425c;
@@ -235,3 +327,41 @@ footer {
   background-color: #293449;
 }
 
+.copyright {
+  float: left;
+  width: 230px;
+  color: #ffffff;
+}
+
+.social {
+  float: left;
+  width: 530px;
+  display: inline;
+  text-align: center;
+}
+
+.feedback {
+  float: left;
+  width: 130px;
+  color: #ffffff;
+}
+
+.feedback a{
+  color: #ffd180;
+}
+
+.developer {
+  float: right;
+  width: 130px;
+  color: #ffffff;
+}
+
+.developer a {
+  color: #ffd180;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

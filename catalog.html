@@ -2,41 +2,44 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Каталог</title>
+    <title>Техномарт</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
       
     <header>     
       <div class="head-top">
         <div class="container">
-          <div class="logo-block head-logo">
+          <div class="head-element logo">
             <a href="index.html">
               <img src="img/logo.png" width="220" height="47" alt="Техномарт">
             </a>
           </div>
-          <div class="search">
+          <div class="head-element search">
             <form action="#" method="get">
               <label>Поиск:
                 <input name="search" type="text">
               </label>
             </form>
           </div>
-          <div class="bookmarks">
+          <div class="head-element bookmarks">
             <a href="#">Закладки: 0</a>
           </div>
-          <div class="basket">
+          <div class="head-element basket">
             <a href="#">Корзина: 0</a>
           </div>
-          <div class="checkout">
+          <div class="head-element checkout">
             <a href="#">Оформить заказ</a>
           </div>
         </div>
       </div>
         
-      <div class="head-middle">
+      <div class="head-main">
         <div class="container">
           <div class="head-info">
-            <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+            <p>Интернет-магазин<br>
+              строительных материалов<br>
+              и инструментов для ремонта</p>
           </div>
           <div class="head-contacts">
             <a href="tel:+78125550505">+7 (812) 555-05-55</a>
@@ -72,20 +75,18 @@
             </div>
           </div>
         </div>
-      </div>
         
-      <div class="head-bottom">
-        <div class="container">
-          <nav class="menu">
+        <div class="head-menu">
+          <nav>
             <ul>
               <li>
-                <a href="#">Главная</a>
+                <a href="index.html">Главная</a>
               </li>
               <li>
                 <a href="#">Компания</a>
               </li>
               <li>
-                <a href="#">Каталог</a>
+                <a href="catalog.html">Каталог</a>
               </li>
               <li>
                 <a href="#">Новости</a>
@@ -160,7 +161,7 @@
     
         <div class="container">
           <div class="sort">     
-            <p>Сортировка:</p>
+            <span>Сортировка:</span>
             <ul>
               <li>
                 <a href="#">По цене</a>
@@ -173,8 +174,8 @@
               </li>
             </ul>
             <div class="sort-arrows">
-              <a href="#"></a>
-              <a href="#">По убыванию</a>          
+              <a href="#">Стрелка</a>
+              <a href="#">Стрелка</a>          
             </div>
           </div>
 
@@ -417,7 +418,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="container">
+        <div class="container clearfix">
           <div class="copyright">
             <p>&copy; 2010-2016 Компания "Техномарт"<br>
               Все права защищены</p>
