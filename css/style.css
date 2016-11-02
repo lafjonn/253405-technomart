@@ -6,6 +6,10 @@ body {
   line-height: 24px;
 }
 
+.container {
+  margin: 0 auto;
+  width: 940px;
+}
 
 h1 {
   font-family: Cuprum;
@@ -190,6 +194,20 @@ aside {
   width: 940px;
 }
 
+.block-top h2 {
+  display: inline-block;
+  float: left;
+}
+
+.block-top a {
+  display: inline-block;
+  float: right;
+}
+
+.block-main {
+  clear: both;
+}
+
 .promo {
   margin-top: 60px;
 }
@@ -199,6 +217,7 @@ aside {
   width: 296px;
   height: 123px;
   font-size: 24px;
+  vertical-align: top;
 }
 
 .promo .materials {
@@ -231,6 +250,7 @@ aside {
   height: 318px;
   display: inline-block;
   border: 1px solid #e5e5e5;
+  vertical-align: top;
 }
 
 .vendors-block {
@@ -241,6 +261,7 @@ aside {
   width: 220px;
   height: 145px;
   border: 1px solid #e5e5e5;
+  vertical-align: top;
 }
 
 .service-block {
@@ -301,7 +322,6 @@ aside {
   width: 530px;
 }
 
-
 .contacts {
   float: right;
   width: 300px;
@@ -360,8 +380,8 @@ aside {
 
 .social {
   float: left;
-  width: 530px;
-  display: inline;
+  width: 400px;
+  display: inline-block;
   text-align: center;
 }
 
@@ -386,7 +406,7 @@ aside {
 }
 
 .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
