@@ -43,6 +43,17 @@ h2 {
   vertical-align: top;
 }
 
+.logo,
+.search {
+  float: left;
+}
+
+.bookmarks,
+.basket,
+.checkout {
+  float: right;
+}
+
 .head-main {
   background-color: #f1f5f7;
   width: auto;
@@ -89,7 +100,6 @@ h2 {
 }
 
 .head-menu {
-  width: 940px;
   clear: both;
 }
 
@@ -127,7 +137,6 @@ main {
 
 .page-title {
   background-color: #f2f6f8;
-  width: 880px;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -172,10 +181,6 @@ aside {
   display: inline;
 }
 
-.pagination {
-  clear: both;
-}
-
 .pagination ul {
   margin: 0;
   padding: 0;
@@ -191,7 +196,6 @@ aside {
 
 .block-top {
   background-color: #f7f3ec;
-  width: 940px;
 }
 
 .block-top h2 {
@@ -214,10 +218,11 @@ aside {
 
 .promo-item {
   display: inline-block;
-  width: 296px;
+  width: 300px;
   height: 123px;
   font-size: 24px;
   vertical-align: top;
+  float: right;
 }
 
 .promo .materials {
@@ -243,6 +248,7 @@ aside {
 .slider {
   width: 620px;
   height: 266px;
+  float: left;
 }
 
 .item {
@@ -251,9 +257,6 @@ aside {
   display: inline-block;
   border: 1px solid #e5e5e5;
   vertical-align: top;
-}
-
-.vendors-block {
 }
 
 .vendor-card {
@@ -293,11 +296,17 @@ aside {
   float: right;
 }
 
+.guarantee,
+.credit {
+  display: none;
+}
+
 .btn {
   display: inline-block;
   background-color: #ee3643;
   color: #ffffff;
   text-decoration: none;
+  border-radius: 2px;
 }
 
 .btn a {
@@ -305,9 +314,9 @@ aside {
   text-decoration: none;
 }
 
-.info-block {
-  background-color: #f2f6f8;
-  clear: both;
+.buy,
+.bookmark {
+  text-align: center;
 }
 
 .info-perf {
@@ -315,6 +324,7 @@ aside {
   padding-left: 130px;
   padding-bottom: 60px;
   margin-top: 60px;
+  background-color: #f2f6f8;
 }
 
 .company-info {
@@ -329,12 +339,17 @@ aside {
 
 .footer-top {
   background-color: #32425c;
-  clear: both;
+}
+
+.footer-logo {
+  float: left;
+  width: 250px;
 }
 
 .footer-contacts {
   width: 330px;
   color: #ffffff;
+  float: left;
 }
 
 .footer-contacts a {
@@ -344,6 +359,7 @@ aside {
 
 .footer-menu {
   text-align: right;
+  float: right;
 }
 
 .footer-menu ul {
@@ -383,6 +399,7 @@ aside {
   width: 400px;
   display: inline-block;
   text-align: center;
+  vertical-align: top;
 }
 
 .feedback {
