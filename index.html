@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'
   </head>
   <body>
       
@@ -55,14 +58,16 @@
               </div>
             </div>
             <div class="user-block">
-              <div class="user-profile">
-                <a href="#">Профиль</a>
-              </div>
-              <div class="user-name">
-                <p>Равшан Джамшутович</p>
-              </div>
-              <div class="user-exit">
-                <a href="#">Выход</a>
+              <div class="profile-block">
+                <div class="user-profile">
+                  <a href="#">Профиль</a>
+                </div>
+                <div class="user-name">
+                  <span>Равшан Джамшутович</span>
+                </div>
+                <div class="user-exit">
+                  <a href="#">Выход</a>
+                </div>
               </div>
               <div class="user-menu">
                 <div class="orders">
@@ -109,24 +114,24 @@
     <main>     
       <div class="promo">
         <div class="container clearfix">
-          <div class="promo-item materials">
-            <span>Материалы</span>
-            <a href="#">На любой вкус</a>
+          <div class="promo-item machines">
+            <span>Техника</span>
+            <a href="#">Для стройки</a>
           </div>
           <div class="promo-item tools">
             <span>Инструмент</span>
             <a href="#">На все случаи</a>
           </div>
-          <div class="promo-item machines">
-            <span>Техника</span>
-            <a href="#">Для стройки</a>
+          <div class="promo-item materials">
+            <span>Материалы</span> <!-- убрать спаны? -->
+            <a href="#">На любой вкус</a>
           </div>
           <div class="slider">
             <div class="slide-item perf"> 
               <div class="slide-top">
                 <label for="perf">
                   <span class="h1-like">Перфораторы</span>
-                    Настоящие мужские игрушки
+                    <span>Настоящие мужские игрушки</span>
                 </label>
               </div>
             </div>          
@@ -134,7 +139,7 @@
               <div class="slide-top">
                 <label for="drill">
                   <span class="h1-like">Дрели</span>
-                  Соседям на радость
+                  <span>Соседям на радость</span>
                 </label>
               </div>
             </div>                   
@@ -171,6 +176,14 @@
           </div>
           <div class="block-main">
             <div class="item">
+              <div class="item-actions">
+                <div class="buy">
+                  <a href="#">Купить</a>
+                </div>
+                <div class="bookmark">
+                  <a href="#">В закладки</a>
+                </div>
+              </div>
               <figure>
                 <img src="img/9000.jpg" alt="">
                 <figcaption>Перфоратор BOSCH BFG 9000
@@ -178,16 +191,16 @@
                   <span class="new-price">25 500 Р.</span>
                 </figcaption>
               </figure>              
+            </div>
+            <div class="item">
               <div class="item-actions">
-                <div class="buy">
+                <div class="buy"> <!-- убрать дивы и те же классы назначить ссылкам, или стилизовать дивы? -->
                   <a href="#">Купить</a>
                 </div>
                 <div class="bookmark">
                   <a href="#">В закладки</a>
                 </div>
               </div>
-            </div>
-            <div class="item">
               <figure>
                 <img src="img/3000.jpg">
                 <figcaption>Перфоратор BOSCH BFG 3000
@@ -195,6 +208,8 @@
                   <span class="new-price">15 500 Р.</span>
                 </figcaption>
               </figure>
+            </div>
+            <div class="item">
               <div class="item-actions">
                 <div class="buy">
                   <a href="#">Купить</a>
@@ -203,8 +218,6 @@
                   <a href="#">В закладки</a>
                 </div>
               </div>
-            </div>
-            <div class="item">
               <figure>
                 <img src="img/6000.jpg">
                 <figcaption>Перфоратор BOSCH BFG 6000
@@ -212,6 +225,8 @@
                   <span class="new-price">25 500 Р.</span>
                 </figcaption>
               </figure>
+            </div>
+            <div class="item last-item">
               <div class="item-actions">
                 <div class="buy">
                   <a href="#">Купить</a>
@@ -220,23 +235,13 @@
                   <a href="#">В закладки</a>
                 </div>
               </div>
-            </div>
-            <div class="item">
               <figure>
                 <img src="img/2000.jpg">
                 <figcaption>Перфоратор BOSCH BFG 2000
-                  <span class="old-price"></span>
+                  <span class="no-price">00 000</span>
                   <span class="new-price">12 500 Р.</span>
                 </figcaption>
               </figure>
-              <div class="item-actions">
-                <div class="buy">
-                  <a href="#">Купить</a>
-                </div>
-                <div class="bookmark">
-                  <a href="#">В закладки</a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -302,7 +307,7 @@
           </div>
           <div class="service-slider">
             <div class="input-block">
-              <input name="service" id="shipping" type="radio">
+              <input name="service" id="shipping" type="radio" checked>
               <input name="service" id="guarantee" type="radio">
               <input name="service" id="credit" type="radio">
             </div>
@@ -314,11 +319,10 @@
             <div class="slides-block">
               <div class="shipping">
                 <h2>Доставка</h2>
-                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!
                 </p>
-                <img src="img/car.png" alt="">
               </div>
               <div class="guarantee">
                 <h2>Гарантия</h2>
@@ -352,7 +356,7 @@
             <div class="transport">
               <p>Мы можем доставить ваш товар в самые отдаленные точки России!
               Техномарт работает со многими транспортными компаниями:</p>
-              <div class="transport-list">
+              <div>
                 <ul>
                   <li>Деловые линии</li>
                   <li>Автотрейдинг</li>
@@ -446,9 +450,9 @@
               Все права защищены</p>
           </div>
           <div class="social">
-            <a class="social-btn" href="#">Вконтакте</a>
-            <a class="social-btn" href="#">Фейсбук</a>
-            <a class="social-btn" href="#">Инстаграм</a>
+            <a class="social-btn vk" href="#">Вконтакте</a>
+            <a class="social-btn fb" href="#">Фейсбук</a>
+            <a class="social-btn inst" href="#">Инстаграм</a>
           </div>
           <div class="feedback">Обратная связь: 
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
