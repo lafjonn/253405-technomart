@@ -14,18 +14,15 @@
       <div class="head-top">
         <div class="container clearfix">
           <div class="logo">
-            <a href="index.html">
-              <img src="img/logo.png" width="220" height="47" alt="Техномарт">
-            </a>
+            <a href="index.html">Техномарт</a>
           </div>
-          <div class="head-element search">
+          <div class="search">
             <form action="#" method="get">
-              <label>Поиск:
-                <input name="search" type="text">
-              </label>
+              <label for="search-id">Поиск:</label>
+              <input name="search" type="text" id="search-id" value="Перфоратор">
             </form>
           </div>
-          <div class="head-element checkout"> <!-- можно ли здесь убрать дивы и назначить классы ссылкам? и в аналогичных случаях -->
+          <div class="head-element checkout">
             <a href="#">Оформить заказ</a>
           </div>
           <div class="head-element basket">
@@ -38,7 +35,7 @@
       </div>
         
       <div class="head-main">
-        <div class="container">
+        <div class="container clearfix">
           <div class="head-info">
             <p>Интернет-магазин<br>
               строительных материалов<br>
@@ -113,7 +110,7 @@
       
     <main>
       <div class="breadcrumbs">
-        <div class="container">
+        <div class="container clearfix">
           <ul>
             <li class="home">
               <a href="index.html">Главная</a>
@@ -130,7 +127,7 @@
       </div>
       
       <div class="page-title">
-        <div class="container">
+        <div class="container clearfix">
           <h1>Перфораторы</h1>
         </div>
       </div>
@@ -138,24 +135,37 @@
       <div class="center-block">
         <div class="container">
           <aside class="filter">
-            <span>Фильтр:</span>
-            <form action="#" method="get">
+            <span class="filter-head">Фильтр:</span>
+            <form action="form" method="get">
               <fieldset>
               <legend>Цена:</legend>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="margin-left: 0%; width: 80%">
+                    </div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls clearfix">
+                  <input name="min-price" type="text" value="0">
+                  <span>-</span>
+                  <input name="max-price" type="text" value="30000">
+                </div>
               </fieldset>
               <hr>
               <fieldset>
                 <legend>Производители:</legend>
                 <input name="bosch" id="bosch-id" type="checkbox" checked>
-                <label for="bosch-id">Bosch</label>
+                <label class="square" for="bosch-id">Bosch</label>
                 <input name="interskol" id="interskol-id" type="checkbox">
-                <label for="interskol-id">Интерскол</label>
+                <label class="square" for="interskol-id">Интерскол</label>
                 <input name="makita" id="makita-id" type="checkbox">
-                <label for="makita-id">Makita</label>
+                <label class="square" for="makita-id">Makita</label>
                 <input name="dewalt" id="dewalt-id" type="checkbox">
-                <label for="dewalt-id">DeWalt</label>
+                <label class="square" for="dewalt-id">DeWalt</label>
                 <input name="hitachi" id="hitachi-id" type="checkbox">
-                <label for="hitachi-id">Hitachi</label>
+                <label class="square" for="hitachi-id">Hitachi</label>
               </fieldset>
               <hr>
               <fieldset>
@@ -185,7 +195,7 @@
               </li>
             </ul>
             <div class="sort-arrows">
-              <a class="up" href="#">Стрелка</a>
+              <a class="up up-active" href="#">Стрелка</a>
               <a class="down" href="#">Стрелка</a>          
             </div>
           </div>
