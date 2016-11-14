@@ -18,8 +18,8 @@
           </div>
           <div class="search">
             <form action="#" method="get">
-              <label for="search-id">Поиск:</label>
-              <input name="search" type="text" id="search-id" value="Перфоратор">
+              <label class="label" for="search-id">Поиск:</label>
+              <input class="search" name="search" type="text" id="search-id" placeholder="Поиск:">
             </form>
           </div>
           <div class="head-element checkout">
@@ -120,7 +120,8 @@
             <a href="#">На все случаи</a>
           </div>
           <div class="promo-item materials">
-            <span>Материалы</span> <!-- убрать спаны? -->
+            <div class="flag flag-new">Новинка</div>
+            <span>Материалы</span>
             <a href="#">На любой вкус</a>
           </div>
           <div class="slider">
@@ -182,7 +183,9 @@
                 </div>
               </div>
               <figure>
-                <img src="img/9000.jpg" alt="">
+                <div class="image">
+                  <img src="img/9000.jpg" alt="">
+                </div>
                 <figcaption>Перфоратор BOSCH BFG 9000
                   <span class="old-price">32 500 Р.</span>
                   <span class="new-price">25 500 Р.</span>
@@ -191,7 +194,7 @@
             </div>
             <div class="item">
               <div class="item-actions">
-                <div class="buy"> <!-- убрать дивы и те же классы назначить ссылкам, или стилизовать дивы? -->
+                <div class="buy">
                   <a href="#">Купить</a>
                 </div>
                 <div class="bookmark">
@@ -199,7 +202,9 @@
                 </div>
               </div>
               <figure>
-                <img src="img/3000.jpg">
+                <div class="image">
+                  <img src="img/3000.jpg">
+                </div>
                 <figcaption>Перфоратор BOSCH BFG 3000
                   <span class="old-price">22 500 Р.</span>
                   <span class="new-price">15 500 Р.</span>
@@ -216,7 +221,9 @@
                 </div>
               </div>
               <figure>
-                <img src="img/6000.jpg">
+                <div class="image">
+                  <img src="img/6000.jpg">
+                </div>
                 <figcaption>Перфоратор BOSCH BFG 6000
                   <span class="old-price">30 500 Р.</span>
                   <span class="new-price">25 500 Р.</span>
@@ -224,6 +231,7 @@
               </figure>
             </div>
             <div class="item last-item">
+              <div class="flag flag-new">Новинка</div>
               <div class="item-actions">
                 <div class="buy">
                   <a href="#">Купить</a>
@@ -233,7 +241,9 @@
                 </div>
               </div>
               <figure>
-                <img src="img/2000.jpg">
+                <div class="image">
+                  <img src="img/2000.jpg">
+                </div>
                 <figcaption>Перфоратор BOSCH BFG 2000
                   <span class="no-price">00 000</span>
                   <span class="new-price">12 500 Р.</span>
@@ -372,17 +382,15 @@
             <div class="btn write-btn">
               <a href="#">Заблудились? Напишите нам!</a>
             </div>
-            <div class="message"> <!-- поп-ап -->
+            <div class="message">
+              <a class="exit-cross" href="#">Выход</a>
               <form>
-                <label>Ваше имя:
-                  <input type="text" name="your-name" value="Представьтесь, пожалуйста">
-                </label>
-                <label>Ваш e-mail:
-                  <input type="text" name="your-mail" value="Для отправки ответа">
-                </label>
-                <label>Текст письма:
-                  <textarea name="your-message" rows="10" cols="25">В свободной форме</textarea>
-                </label>
+                <label class="name-label" for="name-id">Ваше имя:</label>
+                <label for="mail-id">Ваш e-mail:</label>
+                <input class="name-input" type="text" name="your-name" id="name-id" placeholder="Представьтесь, пожалуйста">
+                <input type="text" name="your-mail" id="mail-id" placeholder="Для отправки ответа">
+                <label>Текст письма:</label>
+                <textarea name="your-message" rows="10" cols="25" placeholder="В свободной форме"></textarea>
                 <input type="submit" name="send" value="Отправить">
               </form>
             </div>
