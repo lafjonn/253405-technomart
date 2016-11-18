@@ -6,7 +6,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'
+    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
   </head>
   <body>
       
@@ -81,7 +81,7 @@
             <nav>
               <ul>
                 <li>
-                  <a href="index.html">Главная</a>
+                  <a class="left" href="index.html">Главная</a>
                 </li>
                 <li>
                   <a href="#">Компания</a>
@@ -99,7 +99,7 @@
                   <a href="#">Доставка</a>
                 </li>
                 <li>
-                  <a href="#">Контакты</a>
+                  <a class="right" href="#">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -144,7 +144,7 @@
               <legend>Цена:</legend>
                 <div class="range-controls">
                   <div class="scale">
-                    <div class="bar" style="margin-left: 0%; width: 80%">
+                    <div class="bar" style="margin-left: 0%; width: 90%">
                     </div>
                   </div>
                   <div class="toggle toggle-min"></div>
@@ -158,22 +158,22 @@
               </fieldset>
               <fieldset>
                 <legend>Производители:</legend>
-                <input name="bosch" id="bosch-id" type="checkbox" checked>
+                <input name="bosch" id="bosch-id" type="checkbox" value="bosch" checked>
                 <label class="square" for="bosch-id">Bosch</label>
-                <input name="interskol" id="interskol-id" type="checkbox">
+                <input name="interskol" id="interskol-id" type="checkbox" value="interskol">
                 <label class="square" for="interskol-id">Интерскол</label>
-                <input name="makita" id="makita-id" type="checkbox">
+                <input name="makita" id="makita-id" type="checkbox" value="makita">
                 <label class="square" for="makita-id">Makita</label>
-                <input name="dewalt" id="dewalt-id" type="checkbox">
+                <input name="dewalt" id="dewalt-id" type="checkbox" value="dewalt">
                 <label class="square" for="dewalt-id">DeWalt</label>
-                <input name="hitachi" id="hitachi-id" type="checkbox">
+                <input name="hitachi" id="hitachi-id" type="checkbox" value="hitachi">
                 <label class="square" for="hitachi-id">Hitachi</label>
               </fieldset>
               <fieldset class="last-field">
                 <legend>Питание:</legend>
-                <input name="accum" id="accum-id" type="checkbox">
+                <input name="accum" id="accum-id" type="checkbox" value="accum">
                 <label class="circle" for="accum-id">Аккумуляторные</label>
-                <input name="grid" id="grid-id" type="checkbox">
+                <input name="grid" id="grid-id" type="checkbox" value="grid">
                 <label class="circle" for="grid-id">Сетевые</label>
               </fieldset>
                 <input type="submit" name="filter" value="Показать">
@@ -208,8 +208,8 @@
                   <img src="img/3000.jpg">
                 </div>
                 <figcaption>Перфоратор BOSCH BFG 3000
-                  <span class="old-price">22 500 Р.</span>
-                  <span class="new-price">15 500 Р.</span>
+                  <span class="old-price">22500 Р.</span>
+                  <span class="new-price">15500 Р.</span>
                 </figcaption>
               </figure>
               <div class="item-actions">
@@ -227,8 +227,8 @@
                   <img src="img/6000.jpg">
                 </div>
                 <figcaption>Перфоратор BOSCH BFG 6000
-                  <span class="old-price">30 500 Р.  </span>
-                  <span class="new-price">25 500 Р.</span>
+                  <span class="old-price">30500 Р.  </span>
+                  <span class="new-price">25500 Р.</span>
                 </figcaption>
               </figure>
               <div class="item-actions">
@@ -247,8 +247,8 @@
                   <img src="img/2000.jpg">
                 </div>
                 <figcaption>Перфоратор BOSCH BFG 2000
-                  <span class="no-price">00 000</span>
-                  <span class="new-price">15 500 Р.</span>
+                  <span class="no-price">00000</span>
+                  <span class="new-price">15500 Р.</span>
                 </figcaption>
               </figure>
               <div class="item-actions">
@@ -266,8 +266,8 @@
                   <img src="img/3000.jpg">
                 </div>
                 <figcaption>Перфоратор BOSCH BFG 3000
-                  <span class="old-price">22 500 Р.</span>
-                  <span class="new-price">15 500 Р.</span>
+                  <span class="old-price">22500 Р.</span>
+                  <span class="new-price">15500 Р.</span>
                 </figcaption>
               </figure>
               <div class="item-actions">
@@ -286,8 +286,8 @@
                   <img src="img/6000.jpg">
                 </div>
                 <figcaption>Перфоратор BOSCH BFG 6000
-                  <span class="old-price">30 500 Р.</span>
-                  <span class="new-price">25 500 Р.</span>
+                  <span class="old-price">30500 Р.</span>
+                  <span class="new-price">25500 Р.</span>
                 </figcaption>
               </figure>
               <div class="item-actions">
@@ -305,8 +305,8 @@
                   <img src="img/2000.jpg">
                 </div>
                 <figcaption>Перфоратор BOSCH BFG 2000
-                  <span class="no-price">00 000</span>
-                  <span class="new-price">15 500 Р.</span>
+                  <span class="no-price">00000</span>
+                  <span class="new-price">15500 Р.</span>
                 </figcaption>
               </figure>
               <div class="item-actions">
@@ -325,8 +325,8 @@
                   <img src="img/3000.jpg">
                 </div>
                 <figcaption>Перфоратор BOSCH BFG 3000
-                  <span class="old-price">22 500 Р.</span>
-                  <span class="new-price">15 500 Р.</span>
+                  <span class="old-price">22500 Р.</span>
+                  <span class="new-price">15500 Р.</span>
                 </figcaption>
               </figure>
               <div class="item-actions">
@@ -344,8 +344,8 @@
                   <img src="img/6000.jpg">
                 </div>
                 <figcaption>Перфоратор BOSCH BFG 6000
-                  <span class="old-price">30 500 Р.  </span>
-                  <span class="new-price">25 500 Р.</span>
+                  <span class="old-price">30500 Р.  </span>
+                  <span class="new-price">25500 Р.</span>
                 </figcaption>
               </figure>
               <div class="item-actions">
@@ -363,8 +363,8 @@
                   <img src="img/2000.jpg">
                 </div>
                 <figcaption>Перфоратор BOSCH BFG 2000
-                  <span class="no-price">00 000</span>
-                  <span class="new-price">15 500 Р.</span>
+                  <span class="no-price">00000</span>
+                  <span class="new-price">15500 Р.</span>
                 </figcaption>
               </figure>
               <div class="item-actions">
@@ -399,7 +399,8 @@
           <h2>Пара слов о перфораторах</h2>
           <dl>
             <dt>Перфоратор</dt>
-            <dd>- универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы.Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.</dd>
+            <dd>- универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. 
+            <br>Существуют электромеханические и пневматические перфораторы.Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.</dd>
           </dl>
         </div>
       </div>
