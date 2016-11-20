@@ -5,8 +5,8 @@
     <title>Техномарт</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
       
@@ -243,6 +243,13 @@
                 </div>
               </div>
             </div>
+            <div class="basket-message">
+              <a class="exit-cross" href="#">Выход</a>
+              <div class="tick-circle"></div>
+              <p>Товар добавлен в корзину!</p>
+              <a class="btn" href="#">Оформить заказ</a>
+              <a class="exit-btn" href="#">Продолжить покупки</a>
+            </div>
           </div>
         </div>
       </div>
@@ -360,29 +367,27 @@
                 </ul>
              </div>
             </div>
-            <div class="btn company-btn">
-              <a href="#">Подробнее о компании</a>
-            </div>
+            <a class="btn company-btn" href="#">Подробнее о компании</a>
           </div>
           <div class="contacts">
             <h3>Контакты</h3>
             <p>Вы можете забрать товар сами, заехав в наш офис.</p>
             <div class="map-mini">
-              <img src="img/mapmini.jpg" alt="Карта">
+              <a class="open-map">
+                <img src="img/mapmini.jpg" alt="Карта">
+              </a>
             </div>
             <div class="map-large">
-              <img src="img/map-popup.png"  alt="Карта">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.606885069218!2d30.320580416394293!3d59.93866508187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0LMuINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDRg9C7LiDQkS4g0JrQvtC90Y7RiNC10L3QvdCw0Y8sINC0LiAxOS84!5e0!3m2!1sru!2sru!4v1479645682638" width="960" height="440" frameborder="0" style="border:0" allowfullscreen></iframe>
               <a class="close-map">Свернуть карту</a>
             </div>
-            <div class="btn write-btn">
-              <a href="#">Заблудились? Напишите нам!</a>
-            </div>
+            <a class="btn write-btn" href="#">Заблудились? Напишите нам!</a>
             <div class="message">
               <a class="exit-cross" href="#">Выход</a>
               <form>
-                <label class="name-label" for="name-id">Ваше имя:</label>
+                <label for="name-id">Ваше имя:</label>
                 <label for="mail-id">Ваш e-mail:</label>
-                <input class="name-input" type="text" name="your-name" id="name-id" placeholder="Представьтесь, пожалуйста">
+                <input type="text" name="your-name" id="name-id" placeholder="Представьтесь, пожалуйста">
                 <input type="text" name="your-mail" id="mail-id" placeholder="Для отправки ответа">
                 <label>Текст письма:</label>
                 <textarea name="your-message" rows="10" cols="25" placeholder="В свободной форме"></textarea>
@@ -446,7 +451,7 @@
       <div class="footer-bottom">
         <div class="container clearfix">
           <div class="copyright">
-            <p>&copy; 2010-2016 Компания "Техномарт"<br>
+            <p>&copy; 2010-2016 Компания &laquo;Техномарт&raquo;<br>
               Все права защищены</p>
           </div>
           <div class="social">
@@ -463,5 +468,78 @@
         </div>
       </div>
     </footer>
+    <script>
+      var link = document.querySelector(".write-btn");
+      
+      var popup = document.querySelector(".message");
+      var close = popup.querySelector(".exit-cross");
+      
+      var form = popup.querySelector("form");
+      var username = popup.querySelector("[name=your-name]");
+      var usermail = popup.querySelector("[name=your-mail]");
+      
+      var storage = localStorage.getItem("username");
+      
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("message-show");
+        
+        if (storage) {
+          username.value = storage;
+          usermail.focus();
+        } else {
+          username.focus();
+        }
+      });
+      
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("message-show");
+        popup.classList.remove("message-error");
+      });
+      
+      form.addEventListener("submit", function(event) {
+        if (!username.value || !usermail.value) {
+        event.preventDefault();
+        popup.classList.remove("message-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("message-error");
+        console.log("Введите ваше имя и e-mail");
+        } else {
+          localStorage.setItem("username", username.value);
+        }
+      });
+      
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("message-show")) {
+            popup.classList.remove("message-show");
+            popup.classList.remove("message-error");
+          }
+        }
+      });
+      
+      var mapOpen = document.querySelector(".open-map");
+      var mapPopup = document.querySelector(".map-large");
+      var mapClose = mapPopup.querySelector(".close-map");
+      
+      mapOpen.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.add("show-map");
+      });
+      
+      mapClose.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.remove("show-map");
+      });
+      
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (mapPopup.classList.contains("show-map")) {
+            mapPopup.classList.remove("show-map");
+          }
+        }
+      });      
+    </script>
   </body>
 </html>

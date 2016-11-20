@@ -5,8 +5,8 @@
     <title>Техномарт</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
       
@@ -171,9 +171,9 @@
               </fieldset>
               <fieldset class="last-field">
                 <legend>Питание:</legend>
-                <input name="accum" id="accum-id" type="checkbox" value="accum">
+                <input name="charge" id="accum-id" type="radio" value="accum" checked>
                 <label class="circle" for="accum-id">Аккумуляторные</label>
-                <input name="grid" id="grid-id" type="checkbox" value="grid">
+                <input name="charge" id="grid-id" type="radio" value="grid">
                 <label class="circle" for="grid-id">Сетевые</label>
               </fieldset>
                 <input type="submit" name="filter" value="Показать">
@@ -376,6 +376,13 @@
                 </div>
               </div>
             </div>
+            <div class="basket-message">
+              <a class="exit-cross" href="#">Выход</a>
+              <div class="tick-circle"></div>
+              <p>Товар добавлен в корзину!</p>
+              <a class="btn" href="#">Оформить заказ</a>
+              <a class="exit-btn" href="#">Продолжить покупки</a>
+            </div>
             <ul class="pagination">
               <li>
                 <span class="current-page">1</span>
@@ -475,5 +482,34 @@
         </div>
       </div>
     </footer>
+    <script>
+      var addBasket = document.querySelector(".buy");
+      var basketPopup = document.querySelector(".basket-message");
+      var basketCloseCross = basketPopup.querySelector(".exit-cross");
+      var basketCloseBtn = basketPopup.querySelector(".exit-btn");
+      
+      addBasket.addEventListener("click", function(event) {
+        event.preventDefault();
+        basketPopup.classList.add("basket-message-show");
+      });
+      
+      basketCloseCross.addEventListener("click", function(event) {
+        event.preventDefault();
+        basketPopup.classList.remove("basket-message-show");
+      });
+      
+      basketCloseBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        basketPopup.classList.remove("basket-message-show");
+      });
+      
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (basketPopup.classList.contains("basket-message-show")) {
+            basketPopup.classList.remove("basket-message-show");
+          }
+        }
+      });      
+    </script>
   </body>
 </html>
