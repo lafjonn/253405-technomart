@@ -842,7 +842,10 @@ input[type="radio"]:checked + .circle:hover::after {
 }
 
 input[type="checkbox"]:disabled + .square::before,
-input[type="radio"]:disabled + .circle::after {
+input[type="radio"]:disabled + .circle::after,
+input[type="radio"]:disabled + .circle::before,
+input[type="checkbox"]:checked:disabled + .square::before,
+input[type="radio"]:checked:disabled + .circle::after {
   opacity: 0.3;
 }
 
