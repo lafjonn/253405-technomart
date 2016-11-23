@@ -258,9 +258,8 @@ h3 {
 .head-main {
   background-color: #f1f5f7;
   padding-bottom: 60px;
-  padding-left: 50px;
   padding-top: 40px;
-  padding-right: 50px;
+  margin: 0 auto;
 }
 
 .head-info {
@@ -1640,7 +1639,6 @@ input[type="radio"]:checked:disabled + .circle::after {
 
 .service-block {
   background-color: #f2f6f8;
-  min-height: 480px;
   padding-top: 40px;
   margin-top: 20px;
 }
@@ -1651,12 +1649,15 @@ input[type="radio"]:checked:disabled + .circle::after {
 }
 
 .service-slider {
-  width: 920px;
+  width: 940px;
   min-height: 280px;
   position: relative;
+  overflow: hidden;
 }
 
 .slider-tabs {
+  float: left;
+  width: 240px;
   position: relative;
   padding-top: 50px;
 }
@@ -1674,7 +1675,6 @@ input[type="radio"]:checked:disabled + .circle::after {
 
 .slider-tabs label {
   display: block;
-  width: 200px;
   background-color: #32425c;
   height: 20px;
   color: #ffffff;
@@ -1685,6 +1685,7 @@ input[type="radio"]:checked:disabled + .circle::after {
   -webkit-appearance: none;
   font-size: 21px;
   font-weight: bold;
+  overflow: hidden;
 }
 
 .input-block input {
@@ -1695,52 +1696,48 @@ input[type="radio"]:checked:disabled + .circle::after {
   background-color: #293449;
 }
 
-.slides-block {
-  text-align: left;
-  position: absolute;
-  top: 25px;
-  right: -17px;
-}
-
 .service-slider input {
   display: none;
 }
 
-.slides-block h2 {
-  color: #32425c;
-  font-size: 36px;
+.slide-block {
+  float: right;
+  width: 620px;
+  height: 300px;
+  margin-top: 40px;
+  overflow: hidden;
 }
 
-.slides-block p {
+.slide-block h2 {
+  color: #32425c;
+  font-size: 36px;
+  margin-top: 15px;
+}
+
+.slide-block p {
   width: 300px;
   font-size: 13px;
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.slides-block .shipping-slide {
+.shipping-slide {
   background-image: url("../img/car.png");
   background-repeat: no-repeat;
-  background-position: right bottom;
-  width: 620px;
-  height: 280px;
+  background-position: 100% 100%;
   display: none;
 }
 
-.slides-block .guarantee-slide {
+.guarantee-slide {
   background-image: url("../img/guarantee.png");
   background-repeat: no-repeat;
-  width: 620px;
-  height: 280px;
-  background-position: right bottom;
+  background-position: 100% 100%;
   display: none;
 }
 
-.slides-block .credit-slide {
+.credit-slide {
   background-image: url("../img/credit.png");
   background-repeat: no-repeat;
-  width: 620px;
-  height: 280px;
-  background-position: right bottom;
+  background-position: 100% 100%;
   display: none;
 }
 
@@ -1754,13 +1751,13 @@ input[type="radio"]:checked:disabled + .circle::after {
   border-top: 1px solid #ffffff;
 }
 
-#shipping:checked ~ .slides-block .shipping-slide { 
+#shipping:checked ~ .shipping-slide { 
     display: block;
 }
-#guarantee:checked ~ .slides-block .guarantee-slide { 
+#guarantee:checked ~ .guarantee-slide { 
     display: block;
 }
-#credit:checked ~ .slides-block .credit-slide { 
+#credit:checked ~ .credit-slide { 
     display: block;
 }
 
